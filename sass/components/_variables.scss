@@ -1,0 +1,71 @@
+// Colors
+$color-bg: #fbf8f3;
+$color-body: #4f4f4f;
+$color-black: #000000;
+$color-white: #ffffff;
+$color-border: #dadada;
+$color-primary: #4d13d1;
+$color-secondary: #45b19e;
+$color-title-diversify: #fdfdfd;
+$color-text-diversify: #e5ddfd;
+
+// Font
+$font-body: "Inter", sans-serif;
+
+// Font size
+$font-size-title-small: 2rem;
+$font-size-title-big: 3.6rem;
+$font-size-subtitle: 1.6rem;
+$font-size-avatar: 1.5rem;
+$font-size-body: 1.8rem;
+
+// wrapper
+$wrapper: clamp(4rem, 6.2vw, 14rem);
+
+// breakPoints
+$breakpoints: (
+  small: 499px,
+  medium: 699px,
+  large: 999px,
+  xlarge: 1399px,
+);
+
+@mixin breakpoint($size) {
+  $breakpoint-value: map-get($breakpoints, $size);
+
+  @media screen and (min-width: $breakpoint-value) {
+    @content;
+  }
+}
+
+// button
+@mixin button-bg($bg, $color) {
+  background-color: $bg;
+  color: $color;
+
+  &:hover {
+    transition: all 0.3s ease;
+  }
+
+  @if $bg == $color-primary {
+    &:hover {
+      background-color: $color-white;
+      border-color: 1px solid $color-primary;
+      color: $color-black;
+    }
+  } @else if $bg == $color-white {
+    &:hover {
+      background-color: $color-black;
+      border-color: 1px solid $color-black;
+      color: $color-white;
+    }
+  }
+}
+
+.btn {
+  max-width: 456px;
+  padding: 19px 24px;
+  border-radius: 5px;
+  font-weight: 700;
+  cursor: pointer;
+}
