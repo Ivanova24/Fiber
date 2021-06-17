@@ -6,7 +6,11 @@ html {
     font-size: 62.5%;
   }
   
-  *,
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
   *::after,
   *::before {
     box-sizing: inherit;
@@ -15,14 +19,24 @@ html {
   body {
     font-size: v.$font-size-body;
     color: v.$color-body; 
-    margin: 0;
   }
   
   img {
     max-width: 100%;
     height: auto;
   }
+
+  h1, 
+  h2 {
+    color: v.$color-black; 
+    font-size: v.$font-size-title-big;
+  }
+
+  span {
+    color: v.$color-black; 
+  }
   
   p {
-    line-height: 1.7;
+    margin-bottom: 8px;
+    line-height: 1.6;
   }

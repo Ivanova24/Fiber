@@ -1,0 +1,66 @@
+@use 'variables' as v;
+
+.header {
+  .header-navbar {
+    background-color: v.$color-bg;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px v.$wrapper 0;
+
+    &__logo {
+      font-size: v.$font-size-title-small;
+      color: v.$color-black; 
+      font-weight: 700;
+      
+    }
+
+    &__container {
+      display: none;
+
+      .header-navbar__links,
+      .header-navbar__cta {
+        a {
+          color: v.$color-black;
+          margin-right: 24px;
+          text-decoration: none;
+        }
+      }
+
+      .header-navbar__links {
+        display: flex;
+        align-items: center;
+      }
+
+      .header-navbar__cta {
+        a {
+          font-weight: 700;
+        }
+
+        .btn-cta {
+          min-width: 124px;
+          @include v.button-bg(v.$color-primary);
+        }
+      }
+
+      @include v.breakpoint(medium) {
+        display: flex;
+      }
+
+      @include v.breakpoint(large) {
+        justify-content: space-between;
+        flex-basis: 60%;
+      }
+    }
+
+    &__menu {
+      i {
+        color: v.$color-black;
+      }
+
+      @include v.breakpoint(medium) {
+        display: none;
+      }
+    }
+  }
+}

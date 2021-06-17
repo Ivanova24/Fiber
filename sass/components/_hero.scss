@@ -1,0 +1,47 @@
+@use 'variables' as v;
+
+.hero {
+  background-color: v.$color-bg;
+  padding: 0 v.$wrapper 49px;
+
+  .hero-img {
+    margin-bottom: 18px;
+  }
+
+  .hero-text {
+    display: grid;
+    row-gap: 8px;
+
+    .btn-cta {
+      @include v.button-bg(v.$color-primary);
+    }
+
+    a {
+      text-decoration-thickness: 2px;
+      text-underline-offset: 3px;
+      color: v.$color-primary;
+      text-align: center;
+      font-weight: 700;
+      margin: 11px 0 19px 0;
+    }
+
+    ul {
+      list-style-type: none;
+
+      li {
+        display: flex;
+        &:first-child {
+            margin-bottom: 16px;
+        }
+
+        i {
+          color: v.$color-secondary;
+          margin-right: 8px;
+          font-size: 24px;
+        }
+      }
+    }
+  }
+
+  
+}
