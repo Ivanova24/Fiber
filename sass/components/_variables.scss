@@ -4,6 +4,7 @@ $color-body: #4f4f4f;
 $color-black: #000000;
 $color-white: #ffffff;
 $color-border: #dadada;
+$color-stars: #FF9529; 
 $color-primary: #4d13d1;
 $color-secondary: #45b19e;
 $color-title-diversify: #fdfdfd;
@@ -20,7 +21,7 @@ $font-size-avatar: 1.5rem;
 $font-size-body: 1.8rem;
 
 // wrapper
-$wrapper: clamp(4rem, 6.2vw, 14rem);
+$wrapper: clamp(4rem, 7.2vw, 15rem);
 
 // breakPoints
 $breakpoints: (
@@ -72,5 +73,4 @@ $breakpoints: (
   font-weight: 700;
   max-width: 456px;
   cursor: pointer;
-  
 }
