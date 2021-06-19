@@ -44,7 +44,7 @@ $breakpoints: (
   background-color: $bg;
 
   &:hover {
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
   }
 
   @if $bg == $color-primary {
@@ -56,6 +56,8 @@ $breakpoints: (
       color: $color-black;
     }
   } @else if $bg == $color-white {
+    color: $color-primary;
+    
     &:hover {
       border-color: 1px solid $color-black;
       background-color: $color-black;
@@ -74,3 +76,15 @@ $breakpoints: (
   max-width: 456px;
   cursor: pointer;
 }
+
+// Imagen
+@mixin background($img) {
+  background-image: $img;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; 
+}
+
+
+
+ 

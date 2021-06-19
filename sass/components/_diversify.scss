@@ -1,0 +1,52 @@
+@use 'variables' as v;
+
+main {
+  .diversify {
+    background-color: v.$color-primary;
+    padding: 50px 3.8rem 0 3.8rem;
+    border-radius: 10px;
+    display: grid;
+    row-gap: 57px;
+
+    .diversify-content {
+      display: flex;
+      flex-direction: column;
+      row-gap: 8px;
+
+      h2 {
+        color: v.$color-title-diversify;
+      }
+
+      p {
+        color: v.$color-text-diversify;
+        margin-bottom: 8px;
+      }
+
+      .btn-cta {
+        min-width: 124px;
+        @include v.button-bg(v.$color-white);
+      }
+    }
+
+    .diversify-img {
+      @include v.background(url("/Assets/Page-Image.png"));
+      border-radius: 5px;
+      min-height: 345px;
+    }
+
+    @include v.breakpoint(large) {
+      padding: 46px 46px 0 46px;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 5.4rem;
+      height: 459px;
+
+      .diversify-content {
+        align-self: center;
+
+        .btn-cta {
+          width: 181px;
+        }
+      }
+    }
+  }
+}

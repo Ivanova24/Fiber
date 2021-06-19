@@ -1,0 +1,57 @@
+@use 'variables' as v;
+
+.testimonial {
+  display: grid;
+  row-gap: 40px;
+
+  .testimonial-card {
+    border: thin solid v.$color-border;
+    padding: 2.3rem;
+    display: grid;
+    row-gap: 10px;
+
+    &__user {
+      display: flex;
+      column-gap: 1.3rem;
+
+      .avatar {
+        width: 41px;
+        height: 41px;
+
+        @include v.breakpoint(large) {
+          width: 54px;
+          height: 54px;
+        }
+      }
+
+      .information {
+        align-self: center;
+
+        h4 {
+          font-size: v.$font-size-avatar;
+          color: v.$color-primary;
+        }
+
+        p {
+          font-size: v.$font-size-avatar;
+          color: v.$color-black;
+        }
+      }
+    }
+
+    p {
+      margin-bottom: 6px;
+      color: v.$color-black;
+    }
+
+    .btn-cta {
+      border: thin solid v.$color-border;
+      @include v.button-bg(v.$color-white);
+    }
+  }
+
+  @include v.breakpoint(large) {
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 4rem;
+  }
+}

@@ -1,2 +1,46 @@
 @use 'variables' as v;
 
+main {
+  padding: 80px v.$wrapper 58px;
+  display: grid;
+  row-gap: 80px;
+
+  .features {
+    display: grid;
+    row-gap: 16px;
+
+    span {
+      color: v.$color-primary;
+    }
+
+    h2 {
+      margin-bottom: 48px;
+    }
+
+    div {
+      display: grid;
+      row-gap: 40px;
+
+      .features-content {
+        @extend .features;
+
+        img {
+          max-width: 38px;
+        }
+
+        h3 {
+          font-size: v.$font-size-subtitle;
+        }
+      }
+    }
+
+    @include v.breakpoint(large) {
+      & {
+        div {
+          grid-template-columns: 1fr 1fr 1fr;
+          column-gap: 40px;
+        }
+      }
+    }
+  }
+}

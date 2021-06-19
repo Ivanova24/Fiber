@@ -27,13 +27,17 @@ html {
   }
 
   h1, 
-  h2 {
-    color: v.$color-black; 
+  h2,
+  h3,
+  h4 {
     font-size: v.$font-size-title-big;
+    color: v.$color-black; 
+    font-weight: 700;
   }
 
   span {
     color: v.$color-black; 
+    font-weight: 700;
   }
   
   p {
