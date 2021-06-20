@@ -2,11 +2,10 @@
 
 .header {
   .header-navbar {
-    background-color: v.$color-bg;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px v.$wrapper 0;
+    padding: 64px v.$wrapper 18px;
 
     &__logo {
       font-size: v.$font-size-title-small;
@@ -15,12 +14,15 @@
     &__container {
       display: none;
 
-      .header-navbar__links,
-      .header-navbar__cta {
+      .header-navbar__links {
         a {
-          color: v.$color-black;
           margin-right: 24px;
-          text-decoration: none;
+        }
+      }
+
+      .header-navbar__cta {
+        a:first-child {
+          margin-right: 24px;
         }
       }
 

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/sass/main.css" />
+    <title>Sign Up</title>
+  </head>
+
+  <body>
+    <section class="sing-up">
+      <article class="sing-up__form">
+        <span>Fiber</span>
+        <h1>Create your Fiber account</h1>
+        <form class="form-content">
+          <div class="form-content__data">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" placeholder="John Doe" required />
+          </div>
+          <div class="form-content__data">
+            <label for="email">E-mail</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="john@example.com"
+              required
+            />
+          </div>
+          <div class="form-content__data form-content__data--password">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              placeholder="At least 8 characters"
+              required
+            />
+            <img src="/Assets/hide-password.svg" alt="" />
+          </div>
+          <div class="form-content__data form-content__data--terms">
+            <input type="checkbox" required />
+            <p>
+              By creating an account on Fiber, you agree to the
+              <a href="#">Terms & Conditions</a>.
+            </p>
+          </div>
+          <div class="form-content__data">
+            <button type="submit" class="btn btn-cta">
+              Create Fiber Account
+            </button>
+          </div>
+        </form>
+        <p>Already have an account? <a href="#">Sign in</a></p>
+      </article>
+
+      <article class="sing-up__slider">
+        <div class="sing-up__slider-img"></div>
+        <div class="sing-up__slider-text">
+          <h2>Unparalleled Templates</h2>
+          <p>
+            Crafted by a team of professional designers, our templates are
+            eunparalleled in the market.
+          </p>
+          <img src="/Assets/slider.svg" alt="" />
+        </div>
+      </article>
+    </section>
+  </body>
+</html>

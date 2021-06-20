@@ -1,7 +1,6 @@
 @use 'variables' as v;
 
 .hero {
-  background-color: v.$color-bg;
   padding: 0 v.$wrapper 49px;
   display: grid;
   row-gap: 18px;
@@ -37,6 +36,7 @@
         padding: 19px 0;
 
         a {
+          text-decoration: underline;
           text-decoration-thickness: 2px;
           text-underline-offset: 3px;
           color: v.$color-primary;
