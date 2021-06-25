@@ -25,6 +25,7 @@
 
     @include v.breakpoint(medium) {
       flex-direction: row;
+      flex-wrap: nowrap;
       column-gap: 79px;
     }
 
