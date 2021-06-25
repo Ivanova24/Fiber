@@ -25,13 +25,15 @@
 
     @include v.breakpoint(medium) {
       flex-direction: row;
-      flex-wrap: nowrap;
-      column-gap: 79px;
+      column-gap: 49px;
     }
 
     @include v.breakpoint(large) {
+      flex-wrap: nowrap;
+      column-gap: 79px;
+
       &__links:first-child {
-        flex-basis: 35%;
+        flex-basis: 38%;
       }
     }
   }
